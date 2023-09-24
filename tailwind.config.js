@@ -18,6 +18,10 @@ export default {
           950: '#522914',
         },
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        coursive: ['Baloo 2', 'cursive'],
+      },
     },
   },
   plugins: [],
