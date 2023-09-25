@@ -1,5 +1,5 @@
-import { ShoppingCart } from 'phosphor-react'
-import type { ComponentProps } from 'react'
+import { ShoppingCart } from 'lucide-react'
+import type { ComponentProps, ElementType } from 'react'
 import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
@@ -9,26 +9,27 @@ const cart = tv({
   slots: {
     button: [
       'inline-flex items-center justify-center rounded-md transition relative',
-      'h-10 w-10 bg-coffee-100 p-2 text-coffee-500 enabled:hover:bg-coffee-200/80',
+      'h-10 w-10 bg-amber-100 p-2 text-amber-500 enabled:hover:bg-amber-200/80',
     ],
     badge: [
-      'absolute bg-coffee-500 text-xs font-bold text-coffee-50',
+      'absolute bg-amber-500 text-xs font-bold text-amber-50',
       'rounded-full h-5 w-5 flex items-center justify-center -top-2 -right-2',
     ],
   },
 })
 
 interface Props extends ComponentProps<'button'>, VariantProps<typeof cart> {
-  count?: number
+  counter?: number
+  icon?: ElementType
 }
 
-export function CartButton({ className, count, ...props }: Props) {
+export function Cart({ className, counter, icon: Icon, ...props }: Props) {
   const { button, badge } = cart()
 
   return (
     <button className={cn(button({ className }))} {...props}>
-      <ShoppingCart size={24} weight="fill" />
-      <div className={badge()}>{count}</div>
+      {Icon ? <Icon className="h-6 w-6" /> : <ShoppingCart className="h-6 w-6" />}
+      {counter && <div className={badge()}>{counter}</div>}
     </button>
   )
 }
