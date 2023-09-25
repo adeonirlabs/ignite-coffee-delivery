@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
-import { Button } from './button';
+import type { Meta, StoryObj } from '@storybook/react'
 import { Settings } from 'lucide-react'
+
+import { Button } from './button'
 
 const meta = {
   title: 'Components/Button',
@@ -12,12 +12,12 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     icon: {
-      control: false
-    }
-  }
+      control: false,
+    },
+  },
 } satisfies Meta<typeof Button>
 
-export default meta;
+export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
@@ -31,18 +31,18 @@ export const Secondary: Story = {
   args: {
     variant: 'secondary',
     label: 'Button',
-    icon: Settings
+    icon: Settings,
   },
 }
 
 export const Icon: Story = {
   args: {
     variant: 'icon',
-    icon: Settings
+    icon: Settings,
   },
   argTypes: {
     label: {
-      control: false
-    }
-  }
+      control: false,
+    },
+  },
 }
