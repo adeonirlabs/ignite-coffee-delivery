@@ -1,4 +1,4 @@
-const prettierConfig = require('./.prettierrc.cjs');
+const prettierConfig = require('./.prettierrc.cjs')
 
 module.exports = {
   root: true,
@@ -10,9 +10,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    "plugin:react/recommended",
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
+    'plugin:storybook/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', '.prettierrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -20,7 +21,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    sourceType: "module"
+    sourceType: 'module',
   },
   settings: {
     react: {
@@ -30,18 +31,16 @@ module.exports = {
   overrides: [
     {
       env: {
-        node: true
+        node: true,
       },
-      files: [
-        ".eslintrc.cjs"
-      ],
+      files: ['.eslintrc.cjs'],
       parserOptions: {
-        sourceType: "script"
-      }
-    }
+        sourceType: 'script',
+      },
+    },
   ],
   plugins: [
-    "@typescript-eslint",
+    '@typescript-eslint',
     'react-refresh',
     'react',
     'react-hooks',
@@ -60,9 +59,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
 }
