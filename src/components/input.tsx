@@ -1,14 +1,14 @@
-import type { ComponentPropsWithRef } from 'react'
+import type { ComponentProps } from 'react'
 
 import { cn } from '~/utils/classnames'
 
-interface Props extends ComponentPropsWithRef<'input'> {}
+interface Props extends ComponentProps<'input'> {}
 
 export function Input({ className, required, ...props }: Props) {
   return (
     <div
       className={cn(
-        'rounded-md border-2 border-zinc-200 bg-zinc-100',
+        'w-full rounded-md border-2 border-zinc-200 bg-zinc-100',
         'relative transition focus-within:border-amber-500',
         className,
       )}

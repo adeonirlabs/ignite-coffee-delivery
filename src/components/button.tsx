@@ -25,7 +25,7 @@ export function Button({ className, icon: Icon, label, variant, ...props }: Butt
     <button className={cn(button({ className, variant }))} {...props}>
       {variant === 'secondary' && Icon && <Icon className="h-4 w-4 text-indigo-500" />}
       {variant === 'icon' && Icon && <Icon className="h-5 w-5 text-indigo-50" />}
-      {variant !== 'icon' && label}
+      {variant !== 'icon' && <span className="h-3.5">{label}</span>}
     </button>
   )
 }

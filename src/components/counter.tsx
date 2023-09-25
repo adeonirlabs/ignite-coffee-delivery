@@ -1,9 +1,9 @@
 import { Minus, Plus } from 'lucide-react'
-import { type ComponentPropsWithRef, useState } from 'react'
+import { type ComponentProps, useState } from 'react'
 
 import { cn } from '~/utils/classnames'
 
-interface Props extends ComponentPropsWithRef<'input'> {}
+interface Props extends ComponentProps<'input'> {}
 
 export function Counter({ className, ...props }: Props) {
   const [counter, setCounter] = useState(1)
