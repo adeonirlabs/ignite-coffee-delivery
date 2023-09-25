@@ -29,9 +29,9 @@ const list = [
 export function Hero() {
   return (
     <section className="bg-blur bg-cover bg-no-repeat">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 pb-12 pt-8 lg:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 pb-24 pt-16 lg:flex-row">
         <div>
-          <h1 className="font-coursive text-5xl font-black text-zinc-700">
+          <h1 className="font-coursive text-5xl font-black text-zinc-800">
             Encontre o café perfeito para qualquer hora do dia
           </h1>
           <h2 className="mt-4 text-xl text-zinc-600">
@@ -44,7 +44,7 @@ export function Hero() {
                 <div className={cn('flex h-8 w-8 shrink-0 items-center justify-center gap-2 rounded-full', color)}>
                   <Icon className="h-4 w-4 text-zinc-50" />
                 </div>
-                <span className="text-zinc-700">{text}</span>
+                <span className="text-zinc-800">{text}</span>
               </li>
             ))}
           </ul>

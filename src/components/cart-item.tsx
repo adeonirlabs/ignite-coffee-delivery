@@ -21,8 +21,8 @@ export const CartItem = ({ className, name, price, image, ...props }: Props) => 
       <img className="h-16 w-16" src={image.src} alt={image.alt} />
       <div className="flex flex-1 flex-col justify-between">
         <div className="flex justify-between">
-          <p className="text-zinc-700">{name}</p>
-          <p className="font-bold text-zinc-700">R$ {price}</p>
+          <p className="text-zinc-800">{name}</p>
+          <p className="font-bold text-zinc-800">R$ {price}</p>
         </div>
         <div className="flex gap-2">
           <Counter />

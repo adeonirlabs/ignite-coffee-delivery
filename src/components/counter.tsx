@@ -20,20 +20,20 @@ export function Counter({ className, ...props }: Props) {
     <div className={cn('inline-flex items-center gap-1 rounded-md bg-zinc-200 px-2 py-1', className)}>
       <button
         type="button"
-        className="text-zinc-700 enabled:hover:text-indigo-700"
+        className="text-zinc-800 enabled:hover:text-indigo-700"
         onClick={() => setCounter(counter - 1)}
       >
         <Minus className="h-4 w-4" />
       </button>
       <input
         value={counter}
-        className={cn('w-6 bg-transparent text-center text-zinc-700')}
+        className={cn('w-6 bg-transparent text-center text-zinc-800')}
         onChange={(e) => setCounter(parseInt(e.target.value))}
         {...props}
       />
       <button
         type="button"
-        className="text-zinc-700 enabled:hover:text-indigo-700"
+        className="text-zinc-800 enabled:hover:text-indigo-700"
         onClick={() => setCounter(counter + 1)}
       >
         <Plus className="h-4 w-4" />

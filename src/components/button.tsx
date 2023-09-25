@@ -9,7 +9,7 @@ const button = tv({
   variants: {
     variant: {
       primary: 'bg-amber-500 px-6 py-3 text-sm font-bold tracking-wide text-amber-50 enabled:hover:bg-amber-600',
-      secondary: 'bg-zinc-200 p-2 text-xs text-zinc-700 enabled:hover:bg-zinc-300',
+      secondary: 'bg-zinc-200 p-2 text-xs text-zinc-800 enabled:hover:bg-zinc-300',
       icon: 'h-10 w-10 bg-indigo-800 p-2 text-indigo-50 enabled:hover:bg-indigo-700',
     },
   },

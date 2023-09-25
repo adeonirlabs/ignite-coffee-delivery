@@ -16,7 +16,7 @@ export function Select({ className, value, name, icon: Icon, ...props }: Props) 
         htmlFor={value}
         className={cn(
           'inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md p-4 uppercase transition',
-          'border-2 border-transparent bg-zinc-200 text-xs text-zinc-700 hover:bg-zinc-300',
+          'border-2 border-transparent bg-zinc-200 text-xs text-zinc-800 hover:bg-zinc-300',
           'peer-checked:cursor-default peer-checked:border-indigo-500 peer-checked:bg-indigo-100',
         )}
       >
