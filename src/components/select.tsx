@@ -20,7 +20,7 @@ export function Select({ className, value, name, icon: Icon, ...props }: Props) 
           'peer-checked:cursor-default peer-checked:border-indigo-500 peer-checked:bg-indigo-100',
         )}
       >
-        {Icon && <Icon className="h-4 w-4 text-indigo-500" />}
+        {Icon && <Icon className="h-4 w-4 text-indigo-700" />}
         <span className="h-3.5">{value}</span>
       </label>
     </div>

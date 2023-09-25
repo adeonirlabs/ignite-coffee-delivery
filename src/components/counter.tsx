@@ -20,7 +20,7 @@ export function Counter({ className, ...props }: Props) {
     <div className={cn('inline-flex items-center gap-1 rounded-md bg-zinc-200 px-2 py-1', className)}>
       <button
         type="button"
-        className="text-zinc-700 enabled:hover:text-indigo-500"
+        className="text-zinc-700 enabled:hover:text-indigo-700"
         onClick={() => setCounter(counter - 1)}
       >
         <Minus className="h-4 w-4" />
@@ -33,7 +33,7 @@ export function Counter({ className, ...props }: Props) {
       />
       <button
         type="button"
-        className="text-zinc-700 enabled:hover:text-indigo-500"
+        className="text-zinc-700 enabled:hover:text-indigo-700"
         onClick={() => setCounter(counter + 1)}
       >
         <Plus className="h-4 w-4" />

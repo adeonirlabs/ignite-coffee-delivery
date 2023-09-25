@@ -13,6 +13,9 @@ export default {
       height: {
         3.5: '0.875rem',
       },
+      width: {
+        22: '5.5rem',
+      },
       minWidth: {
         88: '22rem',
       },

@@ -13,8 +13,8 @@ export function Cart({ className, counter, icon: Icon, ...props }: Props) {
     <button
       className={cn(
         [
-          'relative inline-flex items-center justify-center rounded-md transition',
-          'h-10 w-10 bg-amber-100 p-2 text-amber-500 enabled:hover:bg-amber-200/80',
+          'relative flex items-center justify-center rounded-md transition',
+          'h-10 w-10 bg-amber-100 text-amber-500 enabled:hover:bg-amber-200/80',
         ],
         className,
       )}

@@ -28,7 +28,7 @@ export function Button({ className, icon: Icon, label, variant, ...props }: Butt
     primary: <span>{label}</span>,
     secondary: (
       <>
-        {Icon && <Icon className="h-4 w-4 text-indigo-500" />}
+        {Icon && <Icon className="h-4 w-4 text-indigo-700" />}
         <span className="h-3.5">{label}</span>
       </>
     ),
