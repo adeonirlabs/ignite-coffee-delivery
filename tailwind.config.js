@@ -9,7 +9,10 @@ export default {
       },
       height: {
         3.5: '0.875rem',
-      }
+      },
+      borderRadius: {
+        '4xl': '2.25rem',
+      },
     },
   },
   plugins: [],
