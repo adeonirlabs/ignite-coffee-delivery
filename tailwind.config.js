@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        coursive: ['Baloo 2', 'cursive'],
+        coursive: ['"Baloo 2"', 'cursive'],
       },
       height: {
         3.5: '0.875rem',
