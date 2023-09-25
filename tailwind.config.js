@@ -3,12 +3,15 @@ export default {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      backgroundImage: {
+        blur: "url('./src/assets/blur-background.jpg')",
+      },
       borderRadius: {
         '4xl': '2.25rem',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        coursive: ['"Baloo 2"', 'cursive'],
+        coursive: ['"Baloo 2"', 'sans-serif'],
       },
       height: {
         3.5: '0.875rem',
