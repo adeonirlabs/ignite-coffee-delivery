@@ -14,7 +14,7 @@ export function Input({ className, required, ...props }: Props) {
       )}
     >
       <input
-        className={cn('w-full overflow-hidden bg-transparent p-3 text-zinc-800 placeholder:text-zinc-500/80', {
+        className={cn('w-full overflow-hidden bg-transparent p-3 text-zinc-700 placeholder:text-zinc-500/80', {
           'pr-16': !required,
         })}
         {...props}
