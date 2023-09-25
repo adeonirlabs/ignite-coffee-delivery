@@ -53,7 +53,7 @@ export const Card = ({ className, name, description, price, tags, image, ...prop
             <span className="font-coursive text-2xl font-bold text-zinc-700">{price}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Counter />
+            <Counter className="h-10" />
             <Button variant="icon" icon={ShoppingCart} />
           </div>
         </footer>

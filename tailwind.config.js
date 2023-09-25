@@ -3,6 +3,9 @@ export default {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      borderRadius: {
+        '4xl': '2.25rem',
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         coursive: ['"Baloo 2"', 'cursive'],
@@ -10,8 +13,8 @@ export default {
       height: {
         3.5: '0.875rem',
       },
-      borderRadius: {
-        '4xl': '2.25rem',
+      minWidth: {
+        88: '22rem',
       },
     },
   },
