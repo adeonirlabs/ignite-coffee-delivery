@@ -9,16 +9,13 @@ import { Counter } from './counter'
 interface Props extends ComponentProps<'div'> {
   name: string
   price: string
-  image: {
-    src: string
-    alt: string
-  }
+  image: string
 }
 
 export const CartItem = ({ className, name, price, image, ...props }: Props) => {
   return (
     <div className={cn('flex w-full min-w-88 gap-6', className)} {...props}>
-      <img className="h-16 w-16" src={image.src} alt={image.alt} />
+      <img className="h-16 w-16" src={image} alt={name} />
       <div className="flex flex-1 flex-col justify-between">
         <div className="flex justify-between">
           <p className="text-zinc-800">{name}</p>

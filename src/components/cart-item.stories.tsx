@@ -20,9 +20,6 @@ export const Default: Story = {
   args: {
     name: 'Expresso Tradicional',
     price: '9,90',
-    image: {
-      src: expresso,
-      alt: 'Espresso Tradicional',
-    },
+    image: expresso,
   },
 }
