@@ -9,6 +9,9 @@ export default {
       borderRadius: {
         '4xl': '2.25rem',
       },
+      containers: {
+        '2xs': '13rem',
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         alt: ['"Baloo 2"', 'sans-serif'],

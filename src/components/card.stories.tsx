@@ -29,10 +29,7 @@ export const Default: Story = {
     name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     price: '9,90',
-    image: {
-      src: expresso,
-      alt: 'Espresso Tradicional',
-    },
+    image: expresso,
     tags: ['gelado', 'tradicional'],
   },
 }
