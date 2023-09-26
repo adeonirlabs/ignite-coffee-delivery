@@ -11,7 +11,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        coursive: ['"Baloo 2"', 'sans-serif'],
+        alt: ['"Baloo 2"', 'sans-serif'],
       },
       height: {
         3.5: '0.875rem',

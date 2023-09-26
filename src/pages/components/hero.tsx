@@ -31,7 +31,7 @@ export function Hero() {
     <section className="bg-blur bg-cover bg-no-repeat">
       <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 pb-24 pt-16 lg:flex-row">
         <div>
-          <h1 className="font-coursive text-5xl font-black text-zinc-800">
+          <h1 className="font-alt text-5xl font-black text-zinc-800">
             Encontre o café perfeito para qualquer hora do dia
           </h1>
           <h2 className="mt-4 text-xl text-zinc-600">

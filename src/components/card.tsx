@@ -43,14 +43,14 @@ export const Card = ({ className, name, description, price, tags, image, ...prop
         </header>
 
         <main>
-          <p className="mt-4 text-center font-coursive text-xl font-black text-zinc-800">{name}</p>
+          <p className="font-alt mt-4 text-center text-xl font-black text-zinc-800">{name}</p>
           <p className="mt-2 text-center text-sm text-zinc-500">{description}</p>
         </main>
 
         <footer className="mt-8 flex w-full items-center justify-between">
           <div className="flex items-baseline gap-1">
             <span className="text-sm font-medium text-zinc-800">R$</span>
-            <span className="font-coursive text-2xl font-bold text-zinc-800">{price}</span>
+            <span className="font-alt text-2xl font-bold text-zinc-800">{price}</span>
           </div>
           <div className="flex items-center gap-2">
             <Counter className="h-10" />
