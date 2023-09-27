@@ -24,9 +24,9 @@ export const Card = ({ className, name, description, price, tags, image, ...prop
       )}
       {...props}
     >
-      <div className="@container relative z-10 -mt-5 flex flex-1 flex-col">
+      <div className="relative z-10 -mt-5 flex flex-1 flex-col @container">
         <header className="flex flex-col items-center">
-          <img className="h-28 w-28" src={`src/assets/${image}`} alt={name} />
+          <img className="h-28 w-28" src={image} alt={name} />
           <div className="mt-3 flex flex-wrap items-center justify-center gap-1">
             {tags.map((tag) => (
               <span
@@ -44,7 +44,7 @@ export const Card = ({ className, name, description, price, tags, image, ...prop
           <p className="mt-2 text-center text-sm text-zinc-500">{description}</p>
         </main>
 
-        <footer className="@2xs:flex-row mt-auto flex w-full flex-col items-center justify-between gap-2">
+        <footer className="mt-auto flex w-full flex-col items-center justify-between gap-2 @2xs:flex-row">
           <div className="flex items-baseline gap-1">
             <span className="text-sm font-medium text-zinc-800">R$</span>
             <span className="font-alt text-2xl font-bold text-zinc-800">{price}</span>
