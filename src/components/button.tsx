@@ -37,7 +37,7 @@ export function Button({ className, icon: Icon, label, variant, ...props }: Butt
 
   return (
     <button className={cn(button({ className, variant }))} {...props}>
-      {renderChildren[variant!]}
+      {renderChildren[variant || 'primary']}
     </button>
   )
 }
