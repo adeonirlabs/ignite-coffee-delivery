@@ -1,16 +1,13 @@
 import { Trash2 } from 'lucide-react'
 import type { ComponentProps } from 'react'
 
+import type { Coffee } from '~/types'
 import { cn } from '~/utils/classnames'
 
 import { Button } from './button'
 import { Counter } from './counter'
 
-interface Props extends ComponentProps<'div'> {
-  name: string
-  price: string
-  image: string
-}
+interface Props extends Coffee, ComponentProps<'div'> {}
 
 export const CartItem = ({ className, name, price, image, ...props }: Props) => {
   return (

@@ -3,15 +3,10 @@ import type { ComponentProps } from 'react'
 
 import { Button } from '~/components/button'
 import { Counter } from '~/components/counter'
+import type { Coffee } from '~/types'
 import { cn } from '~/utils/classnames'
 
-interface Props extends ComponentProps<'div'> {
-  name: string
-  description: string
-  price: string
-  tags: string[]
-  image: string
-}
+interface Props extends Coffee, ComponentProps<'div'> {}
 
 export const Card = ({ className, name, description, price, tags, image, ...props }: Props) => {
   return (
