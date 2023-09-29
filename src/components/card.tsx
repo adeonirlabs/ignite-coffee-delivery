@@ -39,7 +39,7 @@ export const Card = ({ className, coffee }: Props) => {
         className,
       )}
     >
-      <div className="relative z-10 -mt-5 flex flex-1 flex-col @container">
+      <div className="relative z-10 -mt-5 flex flex-1 flex-col">
         <header className="flex flex-col items-center">
           <img className="h-28 w-28" src={coffee.image} alt={coffee.name} />
           <div className="mt-3 flex flex-wrap items-center justify-center gap-1">
@@ -59,16 +59,18 @@ export const Card = ({ className, coffee }: Props) => {
           <p className="mt-2 text-center text-sm text-zinc-500">{coffee.description}</p>
         </main>
 
-        <footer className="mt-auto flex w-full flex-col items-center justify-between gap-2 @2xs:flex-row">
-          <div className="flex items-baseline gap-1">
-            <span className="text-sm font-medium text-zinc-800">R$</span>
-            <span className="font-alt text-2xl font-bold text-zinc-800">{formatMoney(coffee.price)}</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Counter className="h-10" counter={counter} onIncrement={handleIncrement} onDecrement={handleDecrement} />
-            <Button type="button" variant="icon" icon={ShoppingCart} onClick={handleAddToCart} />
-          </div>
-        </footer>
+        <div className="mt-auto @container/card">
+          <footer className="flex w-full flex-col items-center justify-between gap-2 @2xs/card:flex-row">
+            <div className="flex items-baseline gap-1">
+              <span className="text-sm font-medium text-zinc-800">R$</span>
+              <span className="font-alt text-2xl font-bold text-zinc-800">{formatMoney(coffee.price)}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Counter className="h-10" counter={counter} onIncrement={handleIncrement} onDecrement={handleDecrement} />
+              <Button type="button" variant="icon" icon={ShoppingCart} onClick={handleAddToCart} />
+            </div>
+          </footer>
+        </div>
       </div>
     </article>
   )

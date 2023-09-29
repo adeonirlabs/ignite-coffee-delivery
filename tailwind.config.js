@@ -25,6 +25,9 @@ export default {
       minWidth: {
         88: '22rem',
       },
+      screens: {
+        xs: '480px',
+      },
     },
   },
   plugins: [require('@tailwindcss/container-queries')],

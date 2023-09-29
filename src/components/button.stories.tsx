@@ -24,6 +24,7 @@ export const Primary: Story = {
   args: {
     variant: 'primary',
     label: 'Button',
+    icon: Settings,
   },
 }
 
