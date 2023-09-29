@@ -37,7 +37,7 @@ export function Hero() {
           <h2 className="mt-4 text-xl text-zinc-600">
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora
           </h2>
-          <img className="mx-auto mt-8 block lg:hidden" src={coffeeCup} alt="" />
+          <img className="mx-auto mt-8 block max-h-80 lg:hidden" src={coffeeCup} alt="" />
           <ul className="mt-12 columns-1 md:columns-2 lg:mt-16">
             {list.map(({ text, color, icon: Icon }) => (
               <li key={text} className="mb-4 flex items-start gap-2 sm:items-center">

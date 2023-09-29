@@ -22,7 +22,7 @@ export function Home() {
 
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {coffeesList.map((item) => (
-            <Card key={item.name} {...item} />
+            <Card key={item.id} coffee={item} />
           ))}
         </div>
       </section>

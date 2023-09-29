@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import expresso from '~/assets/expresso.png'
-
 import { Card } from './card'
 
 const meta = {
@@ -11,11 +9,13 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    image: {
-      control: false,
-    },
-    tags: {
-      control: false,
+    coffee: {
+      image: {
+        control: false,
+      },
+      tags: {
+        control: false,
+      },
     },
   },
   tags: ['autodocs'],
@@ -26,10 +26,14 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    name: 'Expresso Tradicional',
-    description: 'O tradicional café feito com água quente e grãos moídos',
-    price: '9,90',
-    image: expresso,
-    tags: ['gelado', 'tradicional'],
+    coffee: {
+      id: 1,
+      name: 'Expresso Tradicional',
+      description: 'O tradicional café feito com água quente e grãos moídos',
+      price: 990,
+      tags: ['Tradicional'],
+      image: 'src/assets/american.png',
+      amount: 1,
+    },
   },
 }
