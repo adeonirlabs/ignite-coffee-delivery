@@ -8,15 +8,14 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  argTypes: {
-    ref: {
-      control: false,
-    },
-  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Counter>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    counter: 1,
+  },
+}
