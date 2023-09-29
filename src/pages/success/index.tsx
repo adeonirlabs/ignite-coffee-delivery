@@ -1,6 +1,6 @@
 import { DollarSign, MapPin, Timer } from 'lucide-react'
 
-import illustration from '~/assets/illustration.svg'
+import illustration from '/assets/illustration.svg'
 import { cn } from '~/utils/classnames'
 
 const list = [

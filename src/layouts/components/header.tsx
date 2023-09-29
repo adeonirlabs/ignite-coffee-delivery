@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react'
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import logo from '~/assets/logo.svg'
+import logo from '/assets/logo.svg'
 import { Cart } from '~/components/cart'
 import { CartContext } from '~/contexts/cart'
 

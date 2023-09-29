@@ -32,7 +32,7 @@ export const Default: Story = {
       description: 'O tradicional café feito com água quente e grãos moídos',
       price: 990,
       tags: ['Tradicional'],
-      image: 'src/assets/american.png',
+      image: '/assets/american.png',
       amount: 1,
     },
   },

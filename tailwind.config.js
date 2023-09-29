@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        blur: "url('./src/assets/blur-background.jpg')",
+        blur: "url('/assets/blur-background.jpg')",
       },
       borderRadius: {
         '4xl': '2.25rem',
