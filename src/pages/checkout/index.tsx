@@ -1,12 +1,21 @@
 import { Banknote, CreditCard, DollarSign, Landmark, MapPin } from 'lucide-react'
+import { useContext, useMemo } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { Button } from '~/components/button'
 import { CartItem } from '~/components/cart-item'
 import { Input } from '~/components/input'
 import { Select } from '~/components/select'
-import { cart } from '~/data/cart-list'
+import { CartContext } from '~/contexts/cart'
+import { formatMoney } from '~/utils/formatMoney'
 
 export function Checkout() {
+  const { cartItems } = useContext(CartContext)
+
+  const deliveryValue = 500
+  const itemsValue = useMemo(() => cartItems.reduce((acc, item) => acc + item.amount * item.price, 0), [cartItems])
+  const totalValue = useMemo(() => (itemsValue ? itemsValue + deliveryValue : 0), [itemsValue])
+
   return (
     <section className="mx-auto max-w-6xl px-4 pb-24 pt-16">
       <h1 className="font-alt text-5xl font-black text-zinc-800">Checkout</h1>
@@ -51,24 +60,32 @@ export function Checkout() {
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <h2 className="font-alt text-2xl font-black text-zinc-800">Complete seu pedido</h2>
+          <h2 className="font-alt text-2xl font-black text-zinc-800">Cafés selecionados</h2>
           <div className="flex w-full flex-col gap-4 self-start rounded-ee-md rounded-es-4xl rounded-se-4xl rounded-ss-md bg-zinc-100 p-8">
             <div className="flex flex-col gap-6 divide-y-2 divide-zinc-200">
-              {cart.map((item) => (
-                <CartItem key={item.name} className="pt-6 first:pt-0" {...item} />
-              ))}
+              {cartItems.length === 0 ? (
+                <p className="text-zinc-600">
+                  Nenhum item na lista,
+                  <NavLink className="px-1 font-medium text-amber-500 transition hover:text-amber-700" to="/">
+                    clique aqui
+                  </NavLink>
+                  para adicionar
+                </p>
+              ) : (
+                cartItems.map((item) => <CartItem key={item.name} className="pt-6 first:pt-0" coffee={item} />)
+              )}
               <div className="flex flex-col gap-2 pt-6">
                 <div className="flex justify-between">
                   <p className="text-sm text-zinc-800">Total de items</p>
-                  <p className="text-sm text-zinc-800">R$ 0,00</p>
+                  <p className="text-sm text-zinc-800">R$ {formatMoney(itemsValue)}</p>
                 </div>
                 <div className="flex justify-between">
                   <p className="text-sm text-zinc-800">Entrega</p>
-                  <p className="text-sm text-zinc-800">R$ 0,00</p>
+                  <p className="text-sm text-zinc-800">R$ {formatMoney(deliveryValue)}</p>
                 </div>
                 <div className="flex justify-between">
                   <p className="text-lg font-medium text-zinc-800">Total</p>
-                  <p className="text-lg font-bold text-zinc-800">R$ 0,00</p>
+                  <p className="text-lg font-bold text-zinc-800">R$ {formatMoney(totalValue)}</p>
                 </div>
               </div>
             </div>
