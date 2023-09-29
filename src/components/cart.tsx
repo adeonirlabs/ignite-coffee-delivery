@@ -4,11 +4,11 @@ import type { ComponentProps, ElementType } from 'react'
 import { cn } from '~/utils/classnames'
 
 interface Props extends ComponentProps<'button'> {
-  counter?: number
+  amount?: number
   icon?: ElementType
 }
 
-export function Cart({ className, counter, icon: Icon, ...props }: Props) {
+export function Cart({ className, amount, icon: Icon, ...props }: Props) {
   return (
     <button
       className={cn(
@@ -21,14 +21,14 @@ export function Cart({ className, counter, icon: Icon, ...props }: Props) {
       {...props}
     >
       {Icon ? <Icon className="h-6 w-6" /> : <ShoppingCart className="h-6 w-6" />}
-      {counter && (
+      {!!amount && (
         <div
           className={cn(
             'absolute bg-amber-500 text-xs font-bold text-amber-50',
             '-right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full',
           )}
         >
-          {counter}
+          {amount}
         </div>
       )}
     </button>
