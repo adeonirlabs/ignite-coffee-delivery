@@ -1,12 +1,14 @@
 import type { ReactNode } from 'react'
 import { createContext, useState } from 'react'
 
+import type { CheckoutData } from '~/pages/checkout/schema'
 import type { CartContextProps, CartItems, Coffee } from '~/types'
 
 export const CartContext = createContext({} as CartContextProps)
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cartItems, setCartItems] = useState<CartItems[]>([])
+  const [checkoutData, setCheckoutData] = useState<CheckoutData>({} as CheckoutData)
 
   function addToCart(coffee: Coffee) {
     const alreadyInCart = cartItems.find((item) => item.id === coffee.id)
@@ -24,6 +26,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setCartItems(cartItems.filter((item) => item.id !== coffee.id))
   }
 
+  function resetCart() {
+    setCartItems([])
+  }
+
   function increaseAmount(coffee: Coffee) {
     if (coffee.amount < 10) {
       setCartItems(cartItems.map((item) => (item.id === coffee.id ? { ...item, amount: item.amount + 1 } : item)))
@@ -36,14 +42,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  function submitCheckout(data: CheckoutData) {
+    setCheckoutData(data)
+  }
+
   return (
     <CartContext.Provider
       value={{
         cartItems,
+        checkoutData,
         addToCart,
         removeFromCart,
+        resetCart,
         increaseAmount,
         decreaseAmount,
+        submitCheckout,
       }}
     >
       {children}
