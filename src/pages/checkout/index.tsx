@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Banknote, CreditCard, DollarSign, Landmark, MapPin } from 'lucide-react'
 import { useContext, useEffect, useMemo } from 'react'
 import { useForm } from 'react-hook-form'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 import { Button } from '~/components/button'
 import { CartItem } from '~/components/cart-item'
@@ -16,6 +16,7 @@ import { type CheckoutData, schema } from './schema'
 
 export function Checkout() {
   const { cartItems, resetCart, submitCheckout } = useContext(CartContext)
+  const navigate = useNavigate()
 
   const deliveryValue = 500
   const itemsValue = useMemo(() => cartItems.reduce((acc, item) => acc + item.amount * item.price, 0), [cartItems])
@@ -38,6 +39,7 @@ export function Checkout() {
     submitCheckout(data)
     resetCart()
     reset()
+    navigate('/success')
   }
 
   useEffect(() => {

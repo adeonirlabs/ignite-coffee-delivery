@@ -15,9 +15,9 @@ export const Select = forwardRef<HTMLInputElement, Props>(
       <label
         htmlFor={value}
         className={cn(
-          'inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-md p-4 uppercase transition',
+          'inline-flex w-full cursor-pointer select-none items-center justify-center gap-2 rounded-md p-4 uppercase transition',
           'whitespace-nowrap border-2 border-transparent bg-zinc-200 text-xs text-zinc-800 hover:bg-zinc-300',
-          'select-none peer-checked:cursor-default peer-checked:border-indigo-500 peer-checked:bg-indigo-100',
+          'peer-checked:bg-indigo-10 peer-checked:cursor-default peer-checked:border-indigo-500 peer-focus:border-amber-500',
         )}
       >
         {Icon && <Icon className="h-4 w-4 shrink-0 text-indigo-700" />}
