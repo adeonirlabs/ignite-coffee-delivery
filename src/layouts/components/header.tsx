@@ -1,6 +1,6 @@
 import { MapPin } from 'lucide-react'
 import { useContext } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import logo from '/assets/logo.svg'
 import { Cart } from '~/components/cart'
@@ -8,6 +8,7 @@ import { CartContext } from '~/contexts/cart'
 
 export function Header() {
   const { cartItems } = useContext(CartContext)
+  const location = useLocation()
 
   return (
     <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-8">
@@ -19,9 +20,13 @@ export function Header() {
           <MapPin className="h-4 w-4" />
           Porto Alegre, RS
         </div>
-        <NavLink to="/checkout">
-          <Cart amount={cartItems.length} />
-        </NavLink>
+        {location.pathname === '/success' ? (
+          <Cart amount={cartItems.length} disabled />
+        ) : (
+          <NavLink to="/checkout">
+            <Cart amount={cartItems.length} />
+          </NavLink>
+        )}
       </div>
     </header>
   )
