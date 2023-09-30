@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently 'pnpm start:web' 'pnpm start:server'",
     "start:web": "vite",
-    "start:server": "json-server src/data/coffee-list.json --watch --delay 500 --port 3333",
+    "start:server": "json-server src/data/coffee-list.json --watch --port 3333",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -15,6 +15,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.3.1",
     "lucide-react": "0.279.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
