@@ -9,7 +9,7 @@ interface Props {
   onDecrement: () => void
 }
 
-export function Counter({ className, counter, onIncrement, onDecrement }: Props) {
+export const Counter = ({ className, counter, onIncrement, onDecrement }: Props) => {
   return (
     <div className={cn('inline-flex items-center gap-1 rounded-md bg-zinc-200 px-2 py-1', className)}>
       <button type="button" className="text-zinc-800 enabled:hover:text-indigo-700" onClick={onDecrement}>

@@ -59,6 +59,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
+    'react/display-name': 'off',
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
 }

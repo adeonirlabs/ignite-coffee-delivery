@@ -8,7 +8,7 @@ interface Props extends ComponentProps<'button'> {
   icon?: ElementType
 }
 
-export function Cart({ className, amount, icon: Icon, ...props }: Props) {
+export const Cart = ({ className, amount, icon: Icon, ...props }: Props) => {
   return (
     <button
       className={cn(

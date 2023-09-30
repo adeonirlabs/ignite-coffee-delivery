@@ -5,7 +5,10 @@ import { tv } from 'tailwind-variants'
 import { cn } from '~/utils/classnames'
 
 const button = tv({
-  base: 'inline-flex items-center justify-center gap-1 rounded-md uppercase transition appearance-none',
+  base: [
+    'inline-flex items-center justify-center gap-1 rounded-md uppercase transition',
+    'appearance-none disabled:bg-zinc-400/70 disabled:text-zinc-100 disabled:cursor-not-allowed',
+  ],
   variants: {
     variant: {
       primary: 'bg-amber-500 px-6 py-3 text-sm font-bold tracking-wide text-amber-50 enabled:hover:bg-amber-600',
@@ -23,13 +26,13 @@ interface ButtonProps extends ComponentProps<'button'>, VariantProps<typeof butt
   icon?: ElementType
 }
 
-export function Button({ className, icon: Icon, label, variant, ...props }: ButtonProps) {
+export const Button = ({ className, icon: Icon, label, variant, ...props }: ButtonProps) => {
   const renderChildren = {
     primary: <span>{label}</span>,
     secondary: (
       <>
         {Icon && <Icon className="h-4 w-4 text-indigo-700" />}
-        <span className="xs:block hidden h-3.5">{label}</span>
+        <span className="hidden h-3.5 xs:block">{label}</span>
       </>
     ),
     icon: Icon && <Icon className="h-5 w-5 text-indigo-50" />,
