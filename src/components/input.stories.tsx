@@ -29,7 +29,6 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     id: 'input',
-    label: 'Label',
     required: false,
   },
 }

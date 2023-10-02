@@ -22,17 +22,17 @@ const button = tv({
 })
 
 interface ButtonProps extends ComponentProps<'button'>, VariantProps<typeof button> {
-  label?: string
+  children?: string
   icon?: ElementType
 }
 
-export const Button = ({ className, icon: Icon, label, variant, ...props }: ButtonProps) => {
+export const Button = ({ className, children, icon: Icon, variant, ...props }: ButtonProps) => {
   const renderChildren = {
-    primary: <span>{label}</span>,
+    primary: <span>{children}</span>,
     secondary: (
       <>
         {Icon && <Icon className="h-4 w-4 text-indigo-700" />}
-        <span className="hidden h-3.5 xs:block">{label}</span>
+        <span className="hidden h-3.5 xs:block">{children}</span>
       </>
     ),
     icon: Icon && <Icon className="h-5 w-5 text-indigo-50" />,

@@ -44,7 +44,9 @@ export const CartItem = ({ className, coffee, ...props }: Props) => {
         </div>
         <div className="flex gap-2 @md/cart-item:mt-0">
           <Counter counter={counter} onIncrement={handleIncrement} onDecrement={handleDecrease} />
-          <Button type="button" variant="secondary" label="Remove" icon={Trash2} onClick={handleRemoveFromCart} />
+          <Button type="button" variant="secondary" icon={Trash2} onClick={handleRemoveFromCart}>
+            Remove
+          </Button>
         </div>
       </div>
     </div>

@@ -158,7 +158,9 @@ export function Checkout() {
                 </div>
               </div>
             </div>
-            <Button type="submit" label="Finalizar Pedido" disabled={isSubmitting} />
+            <Button type="submit" disabled={isSubmitting}>
+              Finalizar Pedido
+            </Button>
           </div>
         </div>
       </form>
