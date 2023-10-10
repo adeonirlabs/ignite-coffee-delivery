@@ -1,4 +1,4 @@
-> Ignite/2023 - Desafio #2
+> Ignite - Desafio #2
 
 # Coffee Delivery
 
@@ -6,7 +6,7 @@
 
 ## Sobre o desafio
 
-Nesse desafio, você vai desenvolver uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
+O desafio consiste em desenvolver uma aplicação para gerenciar um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
 
 - Listagem de produtos (cafés) disponíveis para compra
 - Adicionar uma quantidade específicas de itens no carrinho
@@ -26,9 +26,8 @@ Nesse desafio, você vai desenvolver uma aplicação para gerenciar um carrinho 
 - React Router
 - React Hook Form
 - Zod
-
-## O que foi acrescentado
-
 - Eslint
 - Prettier
 - Json-server
+
+> O desafio original não inclui Tailwind, Eslint e Prettier

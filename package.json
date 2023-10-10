@@ -1,7 +1,7 @@
 {
-  "name": "coffee-delivey",
+  "name": "ignite-coffee-delivery",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "concurrently 'pnpm vite' 'pnpm json-server server.json --delay 500 --port 3333 --watch'",
