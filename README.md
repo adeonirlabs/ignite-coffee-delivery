@@ -30,4 +30,4 @@ O desafio consiste em desenvolver uma aplicação para gerenciar um carrinho de 
 - Prettier
 - Json-server
 
-> O desafio original não inclui Tailwind, Eslint e Prettier
+> O desafio original não inclui Storybook, Tailwind, Eslint e Prettier
