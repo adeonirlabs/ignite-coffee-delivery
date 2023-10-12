@@ -109,6 +109,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: 0.5.4
     version: 0.5.4(prettier@3.0.3)
+  react-github-corner:
+    specifier: 2.5.0
+    version: 2.5.0(react@18.2.0)
   storybook:
     specifier: 7.4.5
     version: 7.4.5
@@ -8083,6 +8086,15 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-is: 18.1.0
+    dev: true
+
+  /react-github-corner@2.5.0(react@18.2.0):
+    resolution: {integrity: sha512-ofds9l6n61LJc6ML+jSE6W9ZSQvATcMR9evnHPXua1oDYj289HKODnVqFUB/g2a4ieBjDHw416iHP3MjqnU76Q==}
+    engines: {node: '>= 4.0.0'}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /react-hook-form@7.47.0(react@18.2.0):

@@ -11,7 +11,7 @@ export function Header() {
   const location = useLocation()
 
   return (
-    <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-8">
+    <header className="mx-auto flex max-w-6xl items-center justify-between px-4 py-8 pt-24">
       <NavLink to="/">
         <img className="h-10 w-22" src={logo} alt="Coffee Delivery" />
       </NavLink>
