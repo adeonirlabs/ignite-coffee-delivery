@@ -21,6 +21,7 @@ O desafio consiste em desenvolver uma aplicação para gerenciar um carrinho de 
 - React
 - TypeScript
 - Vite
+- Supabase
 - Tailwind
 - Tailwind-Variants
 - React Router
@@ -28,6 +29,5 @@ O desafio consiste em desenvolver uma aplicação para gerenciar um carrinho de 
 - Zod
 - Eslint
 - Prettier
-- Json-server
 
-> O desafio original não inclui Storybook, Tailwind, Eslint e Prettier
+> O desafio original não inclui Supabase, Storybook, Tailwind, Eslint e Prettier
