@@ -1,6 +1,6 @@
 import { Minus, Plus } from 'lucide-react'
 
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 
 interface Props {
   className?: string

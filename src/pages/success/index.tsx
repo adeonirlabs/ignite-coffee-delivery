@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import illustration from '/assets/illustration.svg'
 import { CartContext } from '~/contexts/cart'
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 
 export function Success() {
   const { checkoutData } = useContext(CartContext)

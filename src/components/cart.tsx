@@ -1,7 +1,7 @@
 import { ShoppingCart } from 'lucide-react'
 import type { ComponentProps, ElementType } from 'react'
 
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 
 interface Props extends ComponentProps<'button'> {
   amount?: number

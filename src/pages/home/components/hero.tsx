@@ -1,7 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'lucide-react'
 
 import coffeeCup from '/assets/coffee-cup.png'
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 
 const list = [
   {

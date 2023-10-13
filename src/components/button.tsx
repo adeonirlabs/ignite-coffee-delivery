@@ -2,7 +2,7 @@ import type { ComponentProps, ElementType } from 'react'
 import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 
 const button = tv({
   base: [

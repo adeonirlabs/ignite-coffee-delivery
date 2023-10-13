@@ -9,7 +9,7 @@ import { CartItem } from '~/components/cart-item'
 import { Input } from '~/components/input'
 import { Select } from '~/components/select'
 import { CartContext } from '~/contexts/cart'
-import { cn } from '~/utils/classnames'
+import { cn } from '~/utils/classNames'
 import { formatMoney } from '~/utils/formatMoney'
 
 import { type CheckoutData, schema } from './schema'
