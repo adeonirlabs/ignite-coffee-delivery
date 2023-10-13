@@ -6,8 +6,8 @@ import { Counter } from '~/components/counter'
 import { CartContext } from '~/contexts/cart'
 import { useCounter } from '~/hooks/counter'
 import type { Coffee } from '~/models/coffee'
-import { cn } from '~/utils/classNames'
-import { formatMoney } from '~/utils/formatMoney'
+import { cn } from  '~/utils/class-names'
+import { formatMoney } from  '~/utils/format-money'
 
 interface Props extends ComponentProps<'div'> {
   coffee: Coffee

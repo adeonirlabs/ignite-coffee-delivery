@@ -1,6 +1,6 @@
 import { type ComponentPropsWithRef, forwardRef } from 'react'
 
-import { cn } from '~/utils/classNames'
+import { cn } from  '~/utils/class-names'
 
 interface Props extends ComponentPropsWithRef<'input'> {
   error?: boolean

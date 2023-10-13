@@ -1,7 +1,7 @@
 import type { ComponentPropsWithoutRef, ElementType } from 'react'
 import { forwardRef } from 'react'
 
-import { cn } from '~/utils/classNames'
+import { cn } from  '~/utils/class-names'
 
 interface Props extends ComponentPropsWithoutRef<'input'> {
   value: string
