@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react'
 
 import { Card } from '~/components/card'
-import type { Coffee } from '~/types'
+import type { Coffee } from '~/models/coffee'
+import { coffeeSchema } from '~/models/coffee'
+import { supabase } from '~/utils/supabase'
 
 import { Hero } from './components/hero'
 
 export function Home() {
   const [coffeesList, setCoffeesList] = useState<Coffee[]>([])
 
+  async function getData() {
+    const { data } = await supabase.from('coffees').select('*')
+    const coffees = coffeeSchema.array().parse(data)
+    setCoffeesList(coffees)
+  }
+
   useEffect(() => {
-    fetch('http://localhost:3333/coffees')
-      .then((response) => response.json())
-      .then((data) => setCoffeesList(data))
+    getData()
   }, [])
 
   return (
