@@ -1,14 +1,5 @@
-import type { CheckoutData } from './pages/checkout/schema'
-
-export interface Coffee {
-  id: number
-  name: string
-  description: string
-  price: number
-  tags: string[]
-  image: string
-  amount: number
-}
+import type { Coffee } from '~/models/coffee'
+import type { CheckoutData } from '~/pages/checkout/schema'
 
 export interface CartItems extends Coffee {}
 
