@@ -12,7 +12,7 @@ export const schema = z.object({
   cartItems: z
     .array(
       z.object({
-        id: z.number(),
+        id: z.string(),
         name: z.string(),
         description: z.string(),
         price: z.number(),

@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
 import { createContext, useState } from 'react'
 
+import type { CartContextProps, CartItems } from '~/models/cart'
+import type { Coffee } from '~/models/coffee'
 import type { CheckoutData } from '~/pages/checkout/schema'
-import type { CartContextProps, CartItems, Coffee } from '~/types'
 
 export const CartContext = createContext({} as CartContextProps)
 

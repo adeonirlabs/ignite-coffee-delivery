@@ -27,7 +27,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     coffee: {
-      id: 1,
+      id: '1b285672-ad64-4ce4-bb22-39883971d2f2',
       name: 'Expresso Tradicional',
       description: 'O tradicional café feito com água quente e grãos moídos',
       price: 990,

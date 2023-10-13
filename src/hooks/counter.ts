@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import type { Coffee } from '~/types'
+import type { Coffee } from '~/models/coffee'
 
 export function useCounter(coffee: Coffee) {
   const [counter, setCounter] = useState(coffee.amount || 1)
